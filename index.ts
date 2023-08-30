@@ -44,11 +44,11 @@ startGameInputFocus.addEventListener("click", _ => {
 })
 //play Now logique :
 playNowButton.addEventListener("click", _ => {
-    onePieceMusice.play();
-    onePieceMusice.volume = 0.1;
     winSound.volume = 1;
     failSound.volume = 1;
     if (startGameInputFocus.value !== '') {
+        onePieceMusice.play();
+        onePieceMusice.volume = 0.1;
         backGround.src = "images/background2.jpg"; //change background img
         startGameContainer.remove(); //remove start game container
         gameContainer.style.display = "flex"; // bring the new phase of the game
