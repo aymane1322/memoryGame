@@ -46,21 +46,13 @@ playNowButton.addEventListener("click", _ => {
     winSound.volume = 1;
     failSound.volume = 1;
     if (startGameInputFocus.value !== '') {
-        backGround.src = "background2.jpg"; //change background img
+        backGround.src = "images/background2.jpg"; //change background img
         startGameContainer.remove(); //remove start game container
         gameContainer.style.display = "flex"; // bring the new phase of the game
         playerName.innerHTML = startGameInputFocus.value;//put the player name in the right place
         wrongTries.innerHTML = String(wrongTriesCount);//put the right amoun of bad trys in the right place
         //first animation logique
-        gameImgQ.forEach((e) => {
-            (e as HTMLImageElement).classList.add("firstAnimation");
-        })
-        setTimeout(() => {
-            gameImgQ.forEach((e) => {
-                (e as HTMLImageElement).classList.remove("firstAnimation");
-            })
-            playing = true;
-        }, 12200)
+        firstAnimation();
     } else {
         startGameInputFocus.classList.add("required")
     }
@@ -144,6 +136,7 @@ function endGame():void {
             game.style.display = "none";
             youWin.style.display = "flex";
             youWin.addEventListener("click", () => {
+            playing = false;
             gameImgQ.forEach(e=> {
                 (e as HTMLImageElement).style.display = "";
                 (e as HTMLImageElement).style.visibility = "visible";
@@ -153,6 +146,7 @@ function endGame():void {
             wrongTries.innerHTML = String(wrongTriesCount);
             game.style.display = "flex";
             youWin.style.display = "none";
+            firstAnimation();
         })
         },1400)
     }
@@ -173,3 +167,14 @@ function random():void {
     }
 }
 random();
+function firstAnimation() {
+    gameImgQ.forEach((e) => {
+        (e as HTMLImageElement).classList.add("firstAnimation");
+    })
+    setTimeout(() => {
+        gameImgQ.forEach((e) => {
+            (e as HTMLImageElement).classList.remove("firstAnimation");
+        })
+        playing = true;
+    }, 12200)
+}

@@ -42,20 +42,12 @@ playNowButton.addEventListener("click", _ => {
     winSound.volume = 1;
     failSound.volume = 1;
     if (startGameInputFocus.value !== '') {
-        backGround.src = "background2.jpg";
+        backGround.src = "images/background2.jpg";
         startGameContainer.remove();
         gameContainer.style.display = "flex";
         playerName.innerHTML = startGameInputFocus.value;
         wrongTries.innerHTML = String(wrongTriesCount);
-        gameImgQ.forEach((e) => {
-            e.classList.add("firstAnimation");
-        });
-        setTimeout(() => {
-            gameImgQ.forEach((e) => {
-                e.classList.remove("firstAnimation");
-            });
-            playing = true;
-        }, 12200);
+        firstAnimation();
     }
     else {
         startGameInputFocus.classList.add("required");
@@ -139,6 +131,7 @@ function endGame() {
             game.style.display = "none";
             youWin.style.display = "flex";
             youWin.addEventListener("click", () => {
+                playing = false;
                 gameImgQ.forEach(e => {
                     e.style.display = "";
                     e.style.visibility = "visible";
@@ -148,6 +141,7 @@ function endGame() {
                 wrongTries.innerHTML = String(wrongTriesCount);
                 game.style.display = "flex";
                 youWin.style.display = "none";
+                firstAnimation();
             });
         }, 1400);
     }
@@ -168,4 +162,15 @@ function random() {
     }
 }
 random();
+function firstAnimation() {
+    gameImgQ.forEach((e) => {
+        e.classList.add("firstAnimation");
+    });
+    setTimeout(() => {
+        gameImgQ.forEach((e) => {
+            e.classList.remove("firstAnimation");
+        });
+        playing = true;
+    }, 12200);
+}
 //# sourceMappingURL=index.js.map
