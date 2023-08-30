@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* First interface */
+#backGround {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1px;
+  z-index: -100;
+}
+.startGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.startGame input {
+  width: 40%;
+  margin-bottom: 70px;
+  height: 50px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: clamp(25px,3vw,30px);
+  border-radius: 0.3rem;
+  animation: mov 1s 1 ease;
+}
+.startGameInputFocus {
+  background-color: rgb(171, 165, 165);
+  box-shadow: 0px 0px 15px green;
+}
+.startGame button {
+  width: 20%;
+  height: 60px;
+  border-radius: 0.4rem;
+  background-color: rgb(33, 227, 33);
+  color: black;
+  font-weight: bold;
+  font-size: clamp(22px,4vw,30px);
+  border: 0;
+  cursor: pointer;
+  animation: mov 1s 1 ease-in;
+}
+.startGame button:hover {
+  background-color: green;
+  box-shadow: 5px 5px 10px rgb(10, 238, 204);
+}
+@media (max-width: 800px) {
+  .startGame input {
+    width: 80%;
+  }
+  .startGame button {
+    width: 40%;
+  }
+}
+@keyframes mov {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.required {
+  box-shadow: 0px 0px 15px rgb(241, 31, 4);
+}
+/* landing page */
+.gameContainer {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+.playerInformation {
+  display: flex;
+  width: clamp(200px,90%,1020px);
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  height: 60px;
+  padding: 10px;
+  border-radius: 0.2rem;
+  position: relative;
+  animation: backgroundAnimation 2s infinite; 
+  box-shadow: 2px 2px 100px rgb(0, 255, 195);
+}
+#playerName {
+  color: rgb(23, 23, 142);
+  font-size: clamp(10px,4vw,30px);
+  position: absolute;
+  left: 20px;
+}
+#playerName::before {
+  content: "Welcome ";
+  color: black;
+  font-size: clamp(10px,4vw,30px);
+}
+#wrongTries {
+  color: rgb(163, 9, 9);
+  font-size: clamp(10px,4vw,30px);
+  position: absolute;
+  right: 20px;
+  transition:font-size 1s ease; 
+}
+#wrongTries::before {
+  content: "Wrong Tries : ";
+  color: black;
+  font-size: clamp(10px,4vw,30px);
+}
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: clamp(20px,81vw,1155px);
+  height: 80vh;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+}
+@media (max-width:952px) {
+  .game{
+    width: clamp(20px,100vw,1210px);
+    gap: .5rem;
+  }
+}
+.imgContainer {
+  position: relative;
+  /* border: 6px solid rgba(20, 88, 198, 0.7); */
+  /* height: calc(fit-content + 50px); */
+  border-radius: 0.4rem;
+}
+.gameImg,
+.gameImgQ {
+  width: clamp(60px,20vw,180px);
+  height: clamp(60px,20vw,180px);
+  border: 6px solid rgba(20, 88, 198, 0.7);
+  border-radius: 0.4rem;
+}
+.gameImgQ {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.gameImgQ {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+@keyframes firstAnimation {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+    /* transform: rotateZ(90deg); */
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes swapface1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+@keyframes swapface2 {
+  0% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.swapface1 {
+  animation: swapface1 0.5s 1 ease-in-out;
+}
+.swapface2 {
+  animation: swapface2 0.5s 1 ease-in-out;
+}
+.firstAnimation {
+  animation: firstAnimation 12s 1 ease-in-out;
+}
+@keyframes backgroundAnimation {
+  0%, 100% {
+    background-color: rgba(11, 66, 156, 0.5);
+  }
+  50% {
+    background-color: rgba(27, 130, 168, 0.7);
+  }
+}
+.youWin{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(164, 59, 43);
+  width: 40vw;
+  height: 30vh;
+  font-size: clamp(20px,4vw,40px);
+  gap: 1rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+}
+.youWin:hover{
+  background-color:rgb(65, 20, 14) ;
+}
+@media (max-width:600px) {
+  .youWin{
+    width: 70vw;
+    height: 30vh;
+  }
+}

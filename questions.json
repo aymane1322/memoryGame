@@ -1,0 +1,82 @@
+[
+    {
+        "question":"What does HTML stand for?",
+        "a":"Hyper Text Markup Language",
+        "b":"High Tech Modulation Language",
+        "c":"Hyper Transfer Markup Language",
+        "d":"Hyperlink and Text Markup Language",
+        "correctAnswer":"a"
+    },
+    {
+        "question":"Which CSS property is used to change the text color of an element?",
+        "a":"text-style",
+        "b":"color",
+        "c":"text-color",
+        "d":"font-color",
+        "correctAnswer":"b"
+    },
+    {
+        "question":"Which symbol is used to access elements by their ID in JavaScript?",
+        "a":"#",
+        "b":".",
+        "c":"@",
+        "d":"%",
+        "correctAnswer":"a"
+    },
+    {
+        "question":"Which of the following is a valid way to declare a JavaScript variable?",
+        "a":"newVar = 42;",
+        "b":"let 42 = newVar;",
+        "c":"var newVar := 42;",
+        "d":"const newVar = 42;",
+        "correctAnswer":"d"
+    },
+    {
+        "question":"Which HTML tag is used to link an external JavaScript file?",
+        "a":"&lt;link&gt",
+        "b":"&ltscript&gt",
+        "c":"&ltjs&gt",
+        "d":"&ltsource&gt",
+        "correctAnswer":"b"
+    },
+    {
+        "question":"What does CSS stand for?",
+        "a":"Computer Style Sheets",
+        "b":"Creative Style Sheets",
+        "c":"Cascading Style Sheets",
+        "d":"Colorful Style Sheets",
+        "correctAnswer":"c"
+    },
+    {
+        "question":"Which JavaScript function is used to change the content of an HTML element? ",
+        "a":"document.changeContent()",
+        "b":"element.innerHTML()",
+        "c":"element.textContent()",
+        "d":"document.getElementById()",
+        "correctAnswer":"b"
+    },
+    {
+        "question":"Which TypeScript access modifier allows a class member to be accessed from outside the class and its subclasses?",
+        "a":"private",
+        "b":"protected",
+        "c":"public",
+        "d":"internal",
+        "correctAnswer":"c"
+    },
+    {
+        "question":"Which HTML tag is used to create an unordered list?",
+        "a":"&ltdl&gt",
+        "b":"&ltol&gt",
+        "c":"&ltul&gt",
+        "d":"&ltlist&gt",
+        "correctAnswer":"c"
+    },
+    {
+        "question":"What is the purpose of the \"strict mode\" in JavaScript?",
+        "a":"To enforce strict data types throughout the code.",
+        "b":"To enable experimental features in the browser.",
+        "c":"To catch common coding mistakes and \"unsafe\" actions.",
+        "d":"To make the code execute faster.",
+        "correctAnswer":"c"
+    }
+]

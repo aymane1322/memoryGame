@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img id="backGround" src="background1.jpg" alt="backGround image">
+    <!-- start game -->
+    <audio class="onePiece" src="One Piece - Difficult (Metrion Remix) (online-audio-converter.com).mp3"></audio>
+    <audio class="failSound" src="Stamp Fail Sound Effect.mp3"></audio>
+    <audio class="winSound" src="WIN sound effect no copyright.mp3"></audio>
+    <div class="startGame">
+      <input id="name" type="text" spellcheck="false" placeholder="Name" required>
+      <button id="playNow">Play Now!</button>
+    </div>
+    <!-- game  -->
+    <div class="gameContainer">
+      <div class="playerInformation">
+        <p id="playerName"></p>
+        <p id="wrongTries"></p>
+      </div>
+      <div class="game">
+        <div class="imgContainer">
+          <img class="gameImg"  src="images/1.png" alt="game image">
+          <img class="gameImgQ" data-x="1" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg"  src="images/2.png" alt="game image">
+          <img class="gameImgQ" data-x="2" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg"  src="images/3.png" alt="game image">
+          <img class="gameImgQ" data-x="3" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg"  src="images/4.png" alt="game image">
+          <img class="gameImgQ" data-x="4" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/5.png" alt="game image">
+          <img class="gameImgQ" data-x="5" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/6.png" alt="game image">
+          <img class="gameImgQ" data-x="6" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/7.png" alt="game image">
+          <img class="gameImgQ" data-x="7" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/8.png" alt="game image">
+          <img class="gameImgQ" data-x="8" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/9.png" alt="game image">
+          <img class="gameImgQ" data-x="9" src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/10.png" alt="game image">
+          <img class="gameImgQ" data-x="10"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/5.png" alt="game image">
+          <img class="gameImgQ" data-x="5"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/7.png" alt="game image">
+          <img class="gameImgQ" data-x="7"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/6.png" alt="game image">
+          <img class="gameImgQ" data-x="6"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/10.png" alt="game image">
+          <img class="gameImgQ" data-x="10"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/9.png" alt="game image">
+          <img class="gameImgQ" data-x="9"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/2.png" alt="game image">
+          <img class="gameImgQ" data-x="2"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/1.png" alt="game image">
+          <img class="gameImgQ" data-x="1"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/3.png" alt="game image">
+          <img class="gameImgQ" data-x="3"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/8.png" alt="game image">
+          <img class="gameImgQ" data-x="8"  src="images/questionMark.png" alt="">
+        </div>
+        <div class="imgContainer">
+          <img class="gameImg" src="images/4.png" alt="game image">
+          <img class="gameImgQ" data-x="4"  src="images/questionMark.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="youWin">
+      You Win!
+      <span>Play again</span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
