@@ -21,7 +21,9 @@ let firstPickX;
 let secendPickX;
 let isClickable = true;
 let playing = false;
-onePieceMusice.play();
+window.addEventListener("DOMContentLoaded", () => {
+    onePieceMusice.play();
+});
 startGameInputFocus.addEventListener("keyup", e => {
     if (startGameInputFocus.value !== '') {
         startGameInputFocus.classList.add("startGameInputFocus");
@@ -38,6 +40,7 @@ startGameInputFocus.addEventListener("click", _ => {
     startGameInputFocus.classList.remove("required");
 });
 playNowButton.addEventListener("click", _ => {
+    onePieceMusice.play();
     onePieceMusice.volume = 0.1;
     winSound.volume = 1;
     failSound.volume = 1;
