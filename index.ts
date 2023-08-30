@@ -44,6 +44,7 @@ startGameInputFocus.addEventListener("click", _ => {
 })
 //play Now logique :
 playNowButton.addEventListener("click", _ => {
+    onePieceMusice.play();
     onePieceMusice.volume = 0.1;
     winSound.volume = 1;
     failSound.volume = 1;
