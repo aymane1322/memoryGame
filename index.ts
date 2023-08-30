@@ -24,7 +24,9 @@ let secendPickX: string;
 let isClickable: boolean = true;
 let playing: boolean = false;
 //start the music
-onePieceMusice.play();
+window.addEventListener("DOMContentLoaded", () => {
+    onePieceMusice.play();
+})
 //start game inpute animation :
 startGameInputFocus.addEventListener("keyup",e=>{
     if (startGameInputFocus.value !== '') {
