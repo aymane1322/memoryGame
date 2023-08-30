@@ -40,11 +40,11 @@ startGameInputFocus.addEventListener("click", _ => {
     startGameInputFocus.classList.remove("required");
 });
 playNowButton.addEventListener("click", _ => {
-    onePieceMusice.play();
-    onePieceMusice.volume = 0.1;
     winSound.volume = 1;
     failSound.volume = 1;
     if (startGameInputFocus.value !== '') {
+        onePieceMusice.play();
+        onePieceMusice.volume = 0.1;
         backGround.src = "images/background2.jpg";
         startGameContainer.remove();
         gameContainer.style.display = "flex";
